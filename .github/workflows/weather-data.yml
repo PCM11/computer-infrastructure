@@ -1,13 +1,13 @@
-name: Daily Weather Update
+name: Daily Weather Script Automation
 
 on:
   schedule:
-    - cron: '0 10 * * *'  # Runs once a day at 10 AM UTC
+    - cron: '0 10 * * *'  # Runs daily at 10 AM UTC
   workflow_dispatch:  # Allows you to manually trigger the workflow
 
 jobs:
-  update-weather-data:
-    runs-on: ubuntu-latest
+  run-weather-script:
+    runs-on: ubuntu-latest  # Running on the latest Ubuntu environment
 
     steps:
       - name: Checkout repository
@@ -18,19 +18,20 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      - name: Install dependencies (if any)
+      - name: Install dependencies (if needed)
         run: |
-          # Install any dependencies needed for your weather.sh script
-          # For example, curl or jq, depending on your script's needs
           sudo apt-get update
-          sudo apt-get install -y curl jq
+          sudo apt-get install -y curl jq  # Install curl and jq if they are required for your script
 
-      - name: Run the weather script
+      - name: Run the weather.sh script
         run: |
           bash ./weather.sh  # Assuming your script is in the root directory
 
-      - name: Commit and push new weather data
+      - name: Commit and push new data (if any)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
         run: |
-          git add .  # Adds the updated data (assuming it writes to files)
+          git add .  # Add any new files or changes from the script
           git diff --cached --exit-code || git commit -m "Update weather data"
           git push
+
