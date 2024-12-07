@@ -1,75 +1,126 @@
-# My Computer-Infrastructure Repository
-
-**by Phumi Tshidi (phumitshidi@gmail.com)**
+# Computer Infrastructure Repository
+**by: Phumi Tshidi (phumitshidi@gmail.com)**
 
 ## About the repository
 
-This repository contains my assessment submission for 24-25: 8645 - COMPUTER INFRASTRUCTURE module.
-It consists of 9 tasks and one project.
+This repository contains various tasks and scripts related to computer infrastructure management and automation. The focus is on creating, managing, and timestamping files and directories, downloading data, and performing basic scripting tasks. 
 
-## Tasks
+Additionally, the repository includes a **Weather Jupyter Notebook** that provides a summary of all tasks.
 
-**1. Create Directory Structure**
+## Repository Contents
 
-Create a directory (that is, a folder) named data at the root of your repository. Inside data, create two subdirectories: timestamps and weather.
+### 1. **Tasks**
+   **Task 1:** Create Directory Structure
 
-**2. Timestamps**
+   - This task demonstrates how to create a directory structure using the command line. It provides a basic example of how to organize directories for storing files and data.
 
-Navigate to the data/timestamps directory. Use the date command to output the current date and time, appending the output to a file named now.txt. Make sure to use the >> operator to append (not overwrite) the file. Repeat this step ten times, then use the more command to verify that now.txt has the expected content.
+   **Task 2:** Timestamps Using 
 
-**3. Formatting Timestamps**
+   - This task explores the usage of the `date` command to generate timestamps in a variety of formats.
 
-Run the date command again, but this time format the output using YYYYmmdd_HHMMSS (e.g., 20261114_130003 for 1:00:03 PM on November 14, 2026). Append the formatted output to a file named formatted.txt.
+   **Task 3:** Formatting Timestamps 
 
-**4. Create Timestamped Files**
-Use the touch command to create an empty file with a name in the YYYYmmdd_HHMMSS.txt format. You can achieve this by embedding your date command in backticks ` into the touch command.
+   - This task involves formatting timestamps to a specific pattern and appending them to a text file, using `date` command.
 
 
-**5. Download Today's Weather Data**
+   **Task 4:** Create Timestamped Files
 
-Change to the data/weather directory. Download the latest weather data for the Athenry weather station from Met Eireann using wget. Use the -O <filename> option to save the file as weather.json. The data can be found at this URL:
-https://prodapi.metweb.ie/observations/athenry/today.
+   - In this task, you will use the `touch` command to create files with timestamped names. These files are created based on the current time and can be used to track data and activities with precise timestamps.
 
-**6. Timestamp the Data**
+   **Task 5:** Download Today's Weather Data
 
-Modify the command from Task 5 to save the downloaded file with a timestamped name in the format YYYYmmdd_HHMMSS.json.
+   - This task demonstrates how to download today's weather data using the `wget` command. It provides a basic example of how to download JSON data from a remote server using a simple command.
 
-**7. Write the Script**
+   **Task 6:** Timestamp the Data
 
-Write a bash script called weather.sh in the root of your repository. This script should automate the process from Task 6, saving the weather data to the data/weather directory. Make the script executable and test it by running it.
+   - Once the weather data is downloaded, this task shows how to timestamp the downloaded file in the YYYYmmdd_HHMMSS.json format. This allows for easy tracking and organization of downloaded files.
 
-**8. Notebook**
+   **Task 7:** Write a Bash Script
 
-Create a notebook called weather.ipynb at the root of your repository. In this notebook, write a brief report explaining how you completed Tasks 1 to 7. Provide short descriptions of the commands used in each task and explain their role in completing the tasks.
+   - This task includes a bash script that automates some of the tasks listed above. The script will help in organizing, downloading, and timestamping files efficiently.
 
-**9. Pandas**
 
-In your weather.ipynb notebook, use the pandas function read_json() to load in any one of the weather data files you have downloaded with your script. Examine and summarize the data. Use the information provided data.gov.ie to write a short explanation of what the data set contains.
+### 2. **Weather Jupyter Notebook**
+   - A Jupyter notebook summarizing all the tasks, explaining their purpose, and demonstrating the code in action. It provides insights into how to integrate and visualize the results of the tasks.
 
-## Project
+### 3. **Scripts**
+   - Bash scripts that automate some of the tasks, such as creating directories, downloading weather data, and timestamping files.
 
-In this project, you will automate your weather.sh script to run daily and push the new data to your repository. The following steps will create the necessary GitHub Actions workflow.
+### 4. **Documentation**
+   - This README provides an overview of the tasks and steps to run the repository.
+   - The **weather_summary.ipynb** notebook contains a detailed summary and code explanations.
 
-1. Create a GitHub Actions Workflow: In your repository, create a folder called .github/workflows/ (if it doesn't already exist). Inside this folder, create a file called weather-data.yml. This file will define the GitHub Actions workflow.
+## Navigating the Repository
 
-2. Run Daily at 10am: Use the schedule event with cron to set the script to run once a day at 10am. Include also the workflow_dispatch event so you can test the workflow.
+Here is a breakdown of the important files and directories in the repository:
 
-3. Use a Linux Virtual Machine In the workflow file, specify that a Ubuntu virtual machine should be used to run the action.
+- **tasks/**: Contains scripts and commands for each task listed above.
+- **scripts/**: Includes a bash script (`script.sh`) that automates several tasks (like downloading weather data and timestamping).
+- **notebooks/**: Contains the Jupyter notebook (`weather_summary.ipynb`) that summarizes all tasks.
+- **README.md**: This file contains an overview of the repository and instructions.
+- **LICENSE**: The repository's license information (MIT License).
 
-4. Clone the Repository Have the workflow clone your repository.
+## Running the Repository Using GitHub Codespaces
 
-5. Execute the weather.sh Script Add a step that runs your weather.sh script.
+You can easily run this repository in a GitHub Codespace, which provides a cloud-based development environment. Here's how:
 
-6. Commit and Push Changes Back to the Repository Finally, configure the workflow to commit the new weather data and push those changes back to your repository.
+### 1. Open the Repository in GitHub Codespaces
+   - Go to the GitHub repository page.
+   - Click on the green "Code" button.
+   - Select **Open with Codespaces** and then **New codespace**.
+   
+   This will launch a Codespace with the repository's code pre-loaded in a VS Code-like environment.
 
-7. Test the Workflow Commit and push the workflow to your repository. Check the logs in GitHub to ensure that the weather.sh script runs correctly, that new data is being committed.
+### 2. Set Up the Environment in Codespaces
 
-## Installations
+Once your Codespace is ready, follow these steps:
 
-To further explore this dataset you need 
-to download python, which can be 
-installed through [anaconda](https://www.
-anaconda.com
-download), and notebook editor, which can 
-be found in [Visual Studio Code](https://
-code.visualstudio.com/)
+   1. **Open the terminal in Codespaces:**
+      - In the bottom panel, click on the "Terminal" tab to open the terminal.
+   
+   2. **Run the Bash Script:**
+      - Navigate to the `scripts/` directory (if applicable) and run the bash script:
+      ```bash
+      cd scripts
+      bash script.sh
+      ```
+
+   3. **Running the Jupyter Notebook:**
+      - To run the Jupyter Notebook, open the `weather_summary.ipynb` file under the `notebooks/` directory.
+      - Click on the **Run** button or use the command palette to run the cells and see the output.
+
+### 3. Execute Individual Tasks
+
+You can also run individual tasks manually from the terminal or through scripts:
+
+   - **Task 1:** Create Directory Structure using Command Line:
+     ```bash
+     mkdir -p dir1/subdir1
+     ```
+   
+   - **Task 2:** Generate Timestamps:
+     ```bash
+     date '+%Y-%m-%d %H:%M:%S'
+     ```
+   
+   - **Task 5:** Download Today's Weather Data using `wget`:
+     ```bash
+     wget http://example.com/weather_data.json -O weather_$(date +%Y%m%d_%H%M%S).json
+     ```
+
+Each task can be executed independently, or you can automate the entire process using the provided bash script.
+
+## Dependencies
+
+- **Bash shell** (Linux/macOS or Windows Subsystem for Linux)
+- **`wget`** (for downloading weather data)
+- **Jupyter Notebook** (for viewing the weather summary)
+- **GitHub Codespaces** (optional, for cloud-based environment)
+
+If you're running the repository locally (outside Codespaces), make sure to install Jupyter and any other dependencies using `pip` or your preferred method.
+
+## License
+
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
+
+
