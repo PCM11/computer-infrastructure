@@ -5,9 +5,9 @@
 
 ## Key Sections
 
-- **Overview:** Summarises the notebook
+- **Overview:** Summarises the notebook.
 - **Contents:**  Describes the structure of the repository and where to find the tasks, scripts, and notebook.
--**Usage Instructions:** Explains what the notebook does and how to interact with it.
+- **Usage Instructions:** Explains what the notebook does and how to interact with it.
 - **Requirements:** Lists dependencies required to run the notebook.
 - **Running the Jupyter Notebook:** Provides instructions for running the notebook using Anaconda, Visual Studio Code or Codespaces. 
 - **Conclusion:** Provides the reader with an outcome.
@@ -53,7 +53,7 @@ Additionally, the repository includes a **Weather Jupyter Notebook** that provid
 
 ### 2. **Weather Jupyter Notebook**
    - A Jupyter notebook summarizing all the tasks, explaining their purpose, and demonstrating the code in action. It provides insights into how to integrate and visualize the results of the tasks.
-   - It also contains the analysis of one of the data analysis of one of the weather files downloaded with bash script.
+   - It also contains the analysis of the dataframe for one of the weather files downloaded with bash script.
 
 ## How to Use
 
@@ -66,7 +66,7 @@ Additionally, the repository includes a **Weather Jupyter Notebook** that provid
 Before running the notebook, ensure you have the following installed:
 - [Python](https://www.python.org/downloads/) (version 3.12 or higher) also available through anaconda.
 - Jupyter Notebook
-- [Anaconda] (https://www.anaconda.com/download) - recommended for managing environments
+- [Anaconda](https://www.anaconda.com/download) - recommended for managing environments
 - [Visual Studio Code](https://code.visualstudio.com/) - for editing and running Jupyter notebooks
 
 You can install all required dependencies by running:
@@ -155,21 +155,22 @@ If you prefer using Visual Studio Code:
 
 You can also run this repository in a GitHub Codespace, which provides a cloud-based development environment. Here's how:
 
-1. **Open the Repository** in GitHub Codespaces
+1.**Open the Repository** in GitHub Codespaces
    - Go to the GitHub repository page.
    - Click on the green "Code" button.
    - Select **Open with Codespaces** and then **New codespace**.
    
 This will launch a Codespace with the repository's code pre-loaded in a VS Code-like environment.
 
-2. **Set Up the Environment** in Codespaces
+2.**Set Up the Environment** in Codespaces
 
 Once your Codespace is ready, follow these steps:
 
-   - **Open the terminal** in Codespaces:
-      - In the bottom panel, click on the "Terminal" tab to open the terminal.
+- **Open the terminal** in Codespaces:
+
+- In the bottom panel, click on the "Terminal" tab to open the terminal.
    
-   - **Run the Bash Script:**
+- **Run the Bash Script:**
       - Navigate to the `scripts/` directory (if applicable) and run the bash script:
 
       ```bash
