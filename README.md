@@ -1,35 +1,46 @@
 # Computer Infrastructure Repository
 **by: Phumi Tshidi (phumitshidi@gmail.com)**
 
-## About the repository
+<img src="https://www.prompt-master.org/wp-content/uploads/2024/12/output1Nvidia-Predictions-for-2025-Quantum-Computing-AI-Agents-and-Infrastructure-Overhaul-1280x731.png" width="" height="300">
+
+## Key Sections
+
+- **Overview:** Summarises the notebook
+- **Contents:**  Describes the structure of the repository and where to find the tasks, scripts, and notebook.
+-**Usage Instructions:** Explains what the notebook does and how to interact with it.
+- **Requirements:** Lists dependencies required to run the notebook.
+- **Running the Jupyter Notebook:** Provides instructions for running the notebook using Anaconda, Visual Studio Code or Codespaces. 
+- **Conclusion:** Provides the reader with an outcome.
+
+## Overview
 
 This repository contains various tasks and scripts related to computer infrastructure management and automation. The focus is on creating, managing, and timestamping files and directories, downloading data, and performing basic scripting tasks. 
 
-Additionally, the repository includes a **Weather Jupyter Notebook** that provides a summary of all tasks.
+Additionally, the repository includes a **Weather Jupyter Notebook** that provides a summary of all tasks and weather data analysis.
 
-## Repository Contents
+## Contents
 
 ### 1. **Tasks**
    **Task 1:** Create Directory Structure
 
-   - This task demonstrates how to create a directory structure using the command line. It provides a basic example of how to organize directories for storing files and data.
+   - This task demonstrates how to create a `data` directory and its two subdirectories, `timestamps and weather` using the command line. It provides a basic example of how to organize directories for storing files and data.
 
-   **Task 2:** Timestamps Using 
+   **Task 2:** Timestamps
 
-   - This task explores the usage of the `date` command to generate timestamps in a variety of formats.
+   - This task explores the usage of the date command to generate timestamps appending the output into the `now.txt` file.
 
    **Task 3:** Formatting Timestamps 
 
-   - This task involves formatting timestamps to a specific pattern and appending them to a text file, using `date` command.
+   - This task involves formatting timestamps in a `YYYYmmdd_HHMMSS`  format and appending them to `formatted.txt` using date command.
 
 
    **Task 4:** Create Timestamped Files
 
-   - In this task, you will use the `touch` command to create files with timestamped names. These files are created based on the current time and can be used to track data and activities with precise timestamps.
+   - In this task, you will use the `touch` command to create an empty file with timestamped names in the YYYYmmdd_HHMMSS.txt format. These files are created based on the current time and can be used to track data and activities with precise timestamps.
 
    **Task 5:** Download Today's Weather Data
 
-   - This task demonstrates how to download today's weather data using the `wget` command. It provides a basic example of how to download JSON data from a remote server using a simple command.
+   - This task demonstrates how to download latest Athenry's weather data using the `wget` command. It provides a basic example of how to download JSON data from a remote server using a simple command.
 
    **Task 6:** Timestamp the Data
 
@@ -37,90 +48,140 @@ Additionally, the repository includes a **Weather Jupyter Notebook** that provid
 
    **Task 7:** Write a Bash Script
 
-   - This task includes a bash script that automates some of the tasks listed above. The script will help in organizing, downloading, and timestamping files efficiently.
+   - This task creates a bash script in the root of the repository that automates some of the tasks listed above. The script will help in organizing, downloading, and timestamping files efficiently.
 
 
 ### 2. **Weather Jupyter Notebook**
    - A Jupyter notebook summarizing all the tasks, explaining their purpose, and demonstrating the code in action. It provides insights into how to integrate and visualize the results of the tasks.
+   - It also contains the analysis of one of the data analysis of one of the weather files downloaded with bash script.
 
-### 3. **Scripts**
-   - Bash scripts that automate some of the tasks, such as creating directories, downloading weather data, and timestamping files.
+## How to Use
 
-### 4. **Documentation**
-   - This README provides an overview of the tasks and steps to run the repository.
-   - The **weather_summary.ipynb** notebook contains a detailed summary and code explanations.
+- **Load the dataset**: The notebook includes steps for loading weather data.
+- **Data cleaning**: The notebook performs necessary cleaning operations, such as handling missing values or removing irrelevant columns.
+- **Data analysis and visualization**: It processes the data using `pandas, numpy` and generates visualizations (using `matplotlib` or `seaborn`) to provide insights into wind speed trends.
 
-## Navigating the Repository
+## Requirements
 
-Here is a breakdown of the important files and directories in the repository:
+Before running the notebook, ensure you have the following installed:
+- [Python](https://www.python.org/downloads/) (version 3.12 or higher) also available through anaconda.
+- Jupyter Notebook
+- [Anaconda] (https://www.anaconda.com/download) - recommended for managing environments
+- [Visual Studio Code](https://code.visualstudio.com/) - for editing and running Jupyter notebooks
 
-- **tasks/**: Contains scripts and commands for each task listed above.
-- **scripts/**: Includes a bash script (`script.sh`) that automates several tasks (like downloading weather data and timestamping).
-- **notebooks/**: Contains the Jupyter notebook (`weather_summary.ipynb`) that summarizes all tasks.
-- **README.md**: This file contains an overview of the repository and instructions.
-- **LICENSE**: The repository's license information (MIT License).
+You can install all required dependencies by running:
 
-## Running the Repository Using GitHub Codespaces
+## Running the Jupyter Notebook
 
-You can easily run this repository in a GitHub Codespace, which provides a cloud-based development environment. Here's how:
+There are three main ways to run the notebook: using **Anaconda**, **Visual Studio Code** or **Codespaces**.
 
-### 1. Open the Repository in GitHub Codespaces
+### 1. Running with Anaconda
+
+If you're using Anaconda, follow these steps:
+
+1. **Clone this repository** to your local machine:
+
+    ```bash
+    git clone https://github.com/PCM11/computer-infrastructure
+    ```
+
+2. **Navigate to the repository directory**:
+
+    ```bash
+    cd computer-infrastructure
+    ```
+
+3. **Create a new Conda environment** (optional but recommended) with the necessary dependencies:
+
+    ```bash
+    conda create -n weather python=3.12
+    ```
+
+4. **Activate the environment**:
+
+    ```bash
+    conda activate weather
+    ```
+
+5. **Install dependencies** from `requirements.txt`:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+6. **Launch Jupyter Notebook**:
+
+    ```bash
+    jupyter notebook
+    ```
+
+    This will open Jupyter in your web browser. Navigate to `weather.ipynb` and start working with the notebook.
+
+### 2. Running with Visual Studio Code
+
+If you prefer using Visual Studio Code:
+
+1. **Clone the repository** to your local machine:
+
+    ```bash
+    git clone https://github.com/PCM11/computer-infrastructure
+    ```
+
+2. **Navigate to the project directory**:
+
+    ```bash
+    cd computer-infrastructure
+    ```
+
+3. **Open the folder** in Visual Studio Code:
+
+    ```bash
+    code .
+    ```
+
+4. **Install the Python extension** (if not already installed) in Visual Studio Code.
+
+5. **Install the dependencies** by opening a terminal in Visual Studio Code and running:
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+6. **Install the Jupyter extension** in Visual Studio Code.
+
+7. **Open the Jupyter notebook** (`weather.ipynb`) in Visual Studio Code, and the notebook interface will be available to run cells interactively.
+
+### 3. Running the Repository Using GitHub Codespaces
+
+You can also run this repository in a GitHub Codespace, which provides a cloud-based development environment. Here's how:
+
+1. **Open the Repository** in GitHub Codespaces
    - Go to the GitHub repository page.
    - Click on the green "Code" button.
    - Select **Open with Codespaces** and then **New codespace**.
    
-   This will launch a Codespace with the repository's code pre-loaded in a VS Code-like environment.
+This will launch a Codespace with the repository's code pre-loaded in a VS Code-like environment.
 
-### 2. Set Up the Environment in Codespaces
+2. **Set Up the Environment** in Codespaces
 
 Once your Codespace is ready, follow these steps:
 
-   1. **Open the terminal in Codespaces:**
+   - **Open the terminal** in Codespaces:
       - In the bottom panel, click on the "Terminal" tab to open the terminal.
    
-   2. **Run the Bash Script:**
+   - **Run the Bash Script:**
       - Navigate to the `scripts/` directory (if applicable) and run the bash script:
+
       ```bash
       cd scripts
       bash script.sh
       ```
+## Conclusion
 
-   3. **Running the Jupyter Notebook:**
-      - To run the Jupyter Notebook, open the `weather_summary.ipynb` file under the `notebooks/` directory.
-      - Click on the **Run** button or use the command palette to run the cells and see the output.
+In this notebook, we have successfully:
 
-### 3. Execute Individual Tasks
-
-You can also run individual tasks manually from the terminal or through scripts:
-
-   - **Task 1:** Create Directory Structure using Command Line:
-     ```bash
-     mkdir -p dir1/subdir1
-     ```
-   
-   - **Task 2:** Generate Timestamps:
-     ```bash
-     date '+%Y-%m-%d %H:%M:%S'
-     ```
-   
-   - **Task 5:** Download Today's Weather Data using `wget`:
-     ```bash
-     wget http://example.com/weather_data.json -O weather_$(date +%Y%m%d_%H%M%S).json
-     ```
-
-Each task can be executed independently, or you can automate the entire process using the provided bash script.
-
-## Dependencies
-
-- **Bash shell** (Linux/macOS or Windows Subsystem for Linux)
-- **`wget`** (for downloading weather data)
-- **Jupyter Notebook** (for viewing the weather summary)
-- **GitHub Codespaces** (optional, for cloud-based environment)
-
-If you're running the repository locally (outside Codespaces), make sure to install Jupyter and any other dependencies using `pip` or your preferred method.
-
-## License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
-
-
+- Learned how to create directories and files with timestamps using the command line.
+- Generated timestamps using the `date` command.
+- Downloaded and timestamped weather data using `wget.`
+- Wrote a bash script to automate these tasks.
+- Loaded, summarized, and analyzed weather data using `pandas.`
