@@ -1,7 +1,7 @@
 # Computer Infrastructure Repository
 **by: Phumi Tshidi (phumitshidi@gmail.com)**
 
-<img src="https://www.prompt-master.org/wp-content/uploads/2024/12/output1Nvidia-Predictions-for-2025-Quantum-Computing-AI-Agents-and-Infrastructure-Overhaul-1280x731.png" width="" height="300">
+<img src="https://static.vecteezy.com/system/resources/previews/033/692/522/non_2x/close-up-of-fiber-optic-cables-connected-to-servers-in-a-data-center-network-cables-connected-into-switches-ethernet-router-in-data-center-digital-information-transmission-equipment-ai-generated-free-photo.jpg" width="500" height="300">
 
 ## Key Sections
 
@@ -179,10 +179,4 @@ Once your Codespace is ready, follow these steps:
       ```
 ## Conclusion
 
-In this notebook, we have successfully:
-
-- Learned how to create directories and files with timestamps using the command line.
-- Generated timestamps using the `date` command.
-- Downloaded and timestamped weather data using `wget.`
-- Wrote a bash script to automate these tasks.
-- Loaded, summarized, and analyzed weather data using `pandas.`
+This notebook provides a comprehensive framework for analyzing weather data by exploring trends, distributions, and correlations in key variables like temperature and windspeed. By following the structured steps outlined—starting from an overview of the repository to detailed usage instructions—the user is equipped to efficiently interact with the dataset and derive meaningful insights.
